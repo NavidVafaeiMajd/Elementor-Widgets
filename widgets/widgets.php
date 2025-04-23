@@ -17,6 +17,15 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
         return [ 'general' ]; // دسته‌بندی ویجت
     }
 
+	public function get_style_depends() {
+		return [ 'widget-style' ];
+	}
+	
+	public function get_script_depends() {
+		return [ 'widget-script' ];
+	}
+	
+
     // تنظیمات ویجت (کنترل‌ها)
     protected function register_controls() {
         $this->start_controls_section(
@@ -39,7 +48,7 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'button_text',
             [
-                'label' => __( 'متن دکمه', 'my-elementor-widget' ),
+                'label' => __( 'شما متن دکمه', 'my-elementor-widget' ),
                 'type' => \Elementor\Controls_Manager::TEXT,
                 'default' => __( 'کلیک کن', 'my-elementor-widget' ),
             ]
@@ -55,7 +64,7 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
 	<div class="mywidget_card_container">
 		<div class="mywidget_card mywidget-card-front">
 			<div class="mywidget_img_wrapper">
-				<img src="/asset/img/0.jpg" alt="Card image" title="Photo by Joseph Barrientos for Unsplash">
+				<img src="http://localhost:8881/wp-content/uploads/2025/04/Screenshot-2024-09-14-200117.png" alt="Card image" title="Photo by Joseph Barrientos for Unsplash">
 				<div class="mywidget_btn">
 					<div class="mywidget_round_wrapper"><a href="#" class="mywidget-read-more">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" with="30" height="30" fill="white">

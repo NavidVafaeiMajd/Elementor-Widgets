@@ -22,7 +22,7 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
 	}
 	
 	public function get_script_depends() {
-		return [ 'widget-script' ];
+		return [ 'widget-script' , 'gsap'];
 	}
 	
 

@@ -1,7 +1,10 @@
 const card = document.querySelector(".mywidget_card_container");
-const cardFront = card.querySelector(".mywidget-card-front");
-const cardBack = card.querySelector(".mywidget-card-back");
+const cardFront = document.querySelector(".mywidget-card-front");
+const cardBack = document.querySelector(".mywidget-card-back");
 let tl = gsap.timeline({ paused: true, reversed: true });
+
+console.log("it works");
+
 
 function frontToBack() {
 	// Set initial styles for back card (hidden behind the front card)

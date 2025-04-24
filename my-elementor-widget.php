@@ -22,7 +22,10 @@ add_action( 'elementor/widgets/register', 'register_my_custom_widget' );
 function elementor_test_widgets_dependencies() {
 
 	/* Scripts */
-	wp_register_script( 'widget-script', plugins_url( 'asset/js/script.js', __FILE__ ) );
+    wp_register_script( 'gsap', 'https://unpkg.com/gsap@3/dist/gsap.min.js' , [] , null , true);
+    wp_register_script( 'widget-script', plugins_url( '/asset/js/script.js',__FILE__) , ['gsap'], null, true  );
+
+
 	/* Styles */
 	wp_register_style( 'widget-style', plugins_url( 'asset/css/style.css', __FILE__ ) );
 }

@@ -1,16 +1,16 @@
 <?php
 /*
-Plugin Name: ویجت المنتوری من
-Description: یه ویجت ساده برای المنتور
+Plugin Name: My elementor widget
+Description: a simple widget ☺
 Version: 1.0
-Author: خودت
+Author: youe self
 */
 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit; // اگه مستقیم به فایل دسترسی پیدا کردن، خارج شو
+    exit; // if access to file ...
 }
 
-// ثبت ویجت
+// reg widget
 function register_my_custom_widget( $widgets_manager ) {
     require_once( __DIR__ . '/widgets/widgets.php' );
     if(class_exists( '\My_Custom_Widget' ) ){

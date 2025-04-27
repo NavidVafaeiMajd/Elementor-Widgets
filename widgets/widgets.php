@@ -2,19 +2,19 @@
 class My_Custom_Widget extends \Elementor\Widget_Base {
 
     public function get_name() {
-        return 'ویجت المنتوری من'; // اسم منحصر به فرد ویجت
+        return 'MyCustomWidget';
     }
 
     public function get_title() {
-        return __( 'ویجت اختصاصی من', 'my-elementor-widget' ); // عنوان ویجت توی پنل المنتور
+        return __( 'custom widget', 'my-elementor-widget' ); // title of widget
     }
 
     public function get_icon() {
-        return 'eicon-code'; // آیکون ویجت (از آیکون‌های المنتور انتخاب کن)
+        return 'eicon-code'; // widget's icon
     }
 
     public function get_categories() {
-        return [ 'general' ]; // دسته‌بندی ویجت
+        return [ 'general' ]; // widget's category
     }
 
 	public function get_style_depends() {
@@ -26,7 +26,7 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
 	}
 	
 
-    // تنظیمات ویجت (کنترل‌ها)
+    // widget settings
     protected function register_controls() {
         $this->start_controls_section(
             'content_section',
@@ -162,7 +162,7 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
 
     }
 
-    // رندر خروجی ویجت
+    // render
     protected function render() {
         $settings = $this->get_settings_for_display();
         ?>
@@ -189,7 +189,7 @@ class My_Custom_Widget extends \Elementor\Widget_Base {
         <?php
     }
 
-    // پیش‌نمایش زنده توی ویرایشگر المنتور
+    // preview
     protected function content_template() {
         ?>
 	<div class="mywidget_card_container">

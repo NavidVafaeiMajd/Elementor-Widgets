@@ -103,3 +103,101 @@
 	width: 300px;
 	height: 100%;
 }
+
+.card-slide {
+    background: #f4f4f4;
+    border-radius: 25px;
+	overflow: hidden;
+}
+
+.first-sec {
+    display: flex;
+    align-items: space-evenly;
+    justify-content: space-evenly;
+	padding: 10px;
+}
+
+span.rate-star svg {
+    width: 20px;
+    height: 20px;
+}
+
+.first-sec-img img {
+    width: 100px;
+    border-radius: 22px !important;
+    height: 100px;
+    object-fit: cover;
+}
+
+.first-sec-info {
+    display: flex;
+    flex-direction: column;
+	justify-content: space-around;
+}
+span.rate-number {
+    font-size: .9rem !important;
+}
+
+span.rate-number span {
+    color: #80808063;
+}
+
+.first-sec-info-rate {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.secound-sec-separator {
+	position: relative;
+	margin:25px 0;
+	border:1px dashed #aaa;
+	width: 100% !important;
+	&:before,
+	&:after {
+		content: '';
+		height: 50px;
+		width: 50px;
+		background-color: white !important;
+		position: absolute;
+		border-radius: 50%;
+	}
+	
+    &:before {
+        top: -25px;
+        right: -25px;
+        z-index: 10 !important;
+        border: 1px solid #aaa;
+    }
+	&:after {
+		top: -25px;
+		left: -25px;
+		border: 1px solid #aaa;
+
+	}
+}
+.secound-sec {
+    background: white;
+    border: 1px solid #aaa;
+    border-radius: 25px;
+}
+
+.secound-sec-timer {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.secound-sec-btn {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.secound-sec-btn button {
+    font-size: 1rem;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+}

@@ -15,6 +15,7 @@
       }
     });
 
+    
 
     document.querySelectorAll('.secound-sec-timer-count-number').forEach(function (el) {
       const deadline = parseInt(el.getAttribute('data-deadline')) * 1000;
@@ -25,6 +26,7 @@
   
         if (distance < 0) {
           el.textContent = '0:0:0:0';
+          el.disabled = true;
           return;
         }
   
@@ -39,3 +41,24 @@
   
       updateTimer();
     });
+
+
+function copyToClipboard(text) {
+  if (text != "") {
+    if (!navigator.clipboard) {
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
+      alert("Copied: " + text);
+    } else {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Copied: " + text);
+      });
+    }
+  }else {
+    alert('Coupon not found');
+  }
+} 

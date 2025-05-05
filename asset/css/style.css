@@ -104,8 +104,11 @@
 	height: 100%;
 }
 
+.card-slider{
+	direction: rtl !important;
+}
+
 .card-slide {
-    background: #f4f4f4;
     border-radius: 25px;
 	overflow: hidden;
 }
@@ -152,7 +155,7 @@ span.rate-number span {
 .secound-sec-separator {
 	position: relative;
 	margin:25px 0;
-	border:1px dashed #aaa;
+	border:1px dashed #e1e1e1;
 	width: 100% !important;
 	&:before,
 	&:after {
@@ -168,29 +171,29 @@ span.rate-number span {
         top: -25px;
         right: -25px;
         z-index: 10 !important;
-        border: 1px solid #aaa;
+        border: 1px solid #e1e1e1;
     }
 	&:after {
 		top: -25px;
 		left: -25px;
-		border: 1px solid #aaa;
+		border: 1px solid #e1e1e1;
 
 	}
 }
 .secound-sec {
     background: white;
-    border: 1px solid #aaa;
+    border: 1px solid #e1e1e1;
     border-radius: 25px;
+	padding: 25px 0;
 }
 
 .secound-sec-timer {
     padding: 10px;
     display: flex;
-    justify-content: center;
+	justify-content: space-evenly;
 }
 
 .secound-sec-btn {
-    padding: 10px;
     display: flex;
     justify-content: center;
 }
@@ -200,4 +203,22 @@ span.rate-number span {
     padding: 10px 30px;
     border-radius: 10px;
     border: none;
+	width: 80%;
+    cursor: pointer !important;
+}
+
+.secound-sec-timer-count-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.secound-sec-timer-count {
+    display: flex;
+    gap: 10px;
+    align-content: center;
+}
+
+.secound-sec-timer-separator {
+    width: 2px;
+    background: #8080806b;
 }

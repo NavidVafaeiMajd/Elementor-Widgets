@@ -56,6 +56,7 @@ function elementor_test_widgets_dependencies() {
 	/* Styles */
 	wp_register_style( 'widget-style', plugins_url( 'asset/css/style.css', __FILE__ ) );
     wp_register_style( 'swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css' );
+    wp_register_style('bootstrap-css','https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css');
 
 
 }

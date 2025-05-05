@@ -52,12 +52,16 @@ class My_Custom_Widget_Carousel extends \Elementor\Widget_Base {
 						'name' => 'rate',
 						'label' => esc_html__( 'rate', 'textdomain' ),
 						'type' => \Elementor\Controls_Manager::NUMBER,
+						'max' => 5,
+						'min' => 0,
 						'default' => 5,
 					],
 					[
 						'name' => 'discount',
 						'label' => esc_html__( 'discount', 'textdomain' ),
 						'type' => \Elementor\Controls_Manager::NUMBER,
+						'max' => 100,
+						'min' => 0,
 						'default' => 5,
 					],
 					[

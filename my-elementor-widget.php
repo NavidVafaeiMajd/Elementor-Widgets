@@ -2,8 +2,8 @@
 /*
 Plugin Name: My elementor widget
 Description: a simple widget ☺
-Version: 1.0
-Author: youe self
+Version: 2.0
+Author: Navid Vafaei
 */
 
 if ( ! defined( 'ABSPATH' ) ) {

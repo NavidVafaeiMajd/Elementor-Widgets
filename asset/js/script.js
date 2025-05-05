@@ -1,3 +1,5 @@
+
+document.addEventListener('DOMContentLoaded', function () {
     new Swiper(".card-slider", {
       slidesPerView: 1.25,
       spaceBetween: 20,
@@ -15,35 +17,35 @@
       }
     });
 
-    
+
 
     document.querySelectorAll('.secound-sec-timer-count-number').forEach(function (el) {
       const deadline = parseInt(el.getAttribute('data-deadline')) * 1000;
-  
+
       function updateTimer() {
         const now = new Date().getTime();
         let distance = deadline - now;
-  
+
         if (distance < 0) {
           el.textContent = '0:0:0:0';
           el.disabled = true;
           return;
         }
-  
+
         let d = Math.floor(distance / (1000 * 60 * 60 * 24));
         let h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         let m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         let s = Math.floor((distance % (1000 * 60)) / 1000);
-  
+
         el.textContent = `${d}:${h}:${m}:${s}`;
         setTimeout(updateTimer, 1000);
       }
-  
+
       updateTimer();
     });
 
 
-function copyToClipboard(text) {
+  function copyToClipboard(text) {
   if (text != "") {
     if (!navigator.clipboard) {
       const textarea = document.createElement("textarea");
@@ -61,4 +63,6 @@ function copyToClipboard(text) {
   }else {
     alert('Coupon not found');
   }
-} 
+  } 
+});
+

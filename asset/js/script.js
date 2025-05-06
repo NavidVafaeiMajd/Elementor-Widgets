@@ -45,7 +45,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-  function copyToClipboard(text) {
+});
+function copyToClipboard(text) {
   if (text != "") {
     if (!navigator.clipboard) {
       const textarea = document.createElement("textarea");
@@ -64,5 +65,3 @@ document.addEventListener('DOMContentLoaded', function () {
     alert('Coupon not found');
   }
   } 
-});
-
